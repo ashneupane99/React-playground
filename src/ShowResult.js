@@ -1,11 +1,15 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
-export const ShowResult = ({show}) => {
+export const ShowResult = () => {
+  const data = useSelector ((state)=> state.data)
   return (
     <div>
-        <p>
-            {show}
-    </p>
+     <ul>
+      {data.display.map((item)=> (
+        <li>{item}</li>
+      ))}
+     </ul>
     </div>
   )
 }

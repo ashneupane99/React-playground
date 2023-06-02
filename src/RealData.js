@@ -1,7 +1,8 @@
 import React from 'react'
 
-export const RealData = ({data}) => {
+
+export const RealData = ({name}) => {
   return (
-    <div>{data}</div>
+    <div>{name}</div>
   )
 }
